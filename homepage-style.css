@@ -1,0 +1,153 @@
+
+
+/* -------------------------- GLOBAL STYLE ------------------------------- */
+body{
+    background-image: url(./assets/home/background-home-mobile.jpg);  
+}
+
+
+
+/* ------------------------------ COMMON STYLES ----------------------------- */
+#heading5, #text{
+    color: var(--text-color);
+    font-family: var(--barlow-font-family);
+}
+
+h2, .explore{
+    font-family: var(--bellefair-font-family);
+}
+
+.explore, .explore:hover, #explore-text{
+    border-radius: 50%;
+    border: 0rem solid;
+}
+
+
+
+/* styling the header section */
+header{
+    padding-bottom: 0rem;
+}
+
+
+/* styling the main section */
+main{
+    margin: 1rem auto;
+    text-align: center;
+}
+
+#heading5{
+    letter-spacing: 0.15rem;
+    font-size: 1.75rem;
+}
+
+h2{
+    font-size: 6.25rem;
+    color: var(--white-color);
+}
+
+#text{
+    padding: 0rem 2rem;
+    line-height: 2.2rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+}
+
+#explore-text{
+    background-color: var(--white-color);
+    letter-spacing: 0.15rem;
+    padding: 4rem 2rem;
+    color: var(--website-color);
+    font-size: 1rem;
+}
+
+.explore{
+    margin: 4rem 0rem;
+    transition: 700ms ease-out;
+}
+
+.explore:hover{
+    cursor: pointer;
+    padding: 3rem;
+    background: var(--alt-nav-bg-color);
+}
+
+@supports (backdrop-filter: blur(1.2rem)){
+    .explore:hover{
+        background: var(--nav-bg-color);
+        backdrop-filter: blur(1.2rem);
+    }
+}
+
+
+
+
+
+
+/* -------------------------  MEDIA QUERIES  --------------------------------- */
+
+@media (min-width: 23.5em) and (max-width: 48.125em){
+
+    /* -------------------------- GLOBAL STYLE ------------------------------- */
+    body{
+        background: url(./assets/home/background-home-tablet.jpg);  
+    }
+}
+
+
+
+
+
+@media (min-width: 48.125em){
+
+    /* -------------------------- GLOBAL STYLE ------------------------------- */
+    body{
+        background: url(./assets/home/background-home-desktop.jpg);  
+    }
+
+}
+
+
+
+
+
+@media (min-width: 37.5em) and (max-width: 56.25em){
+
+    /* styling the main section */
+    main{
+        margin-top: 5rem;
+    }
+
+    #text{
+        max-width: 30em;
+        display: inline-block;
+    }
+}
+
+
+
+
+
+@media (min-width: 56.25em){
+
+    /* styling the main section */
+    main{
+        padding: 3em 7em 3em 8.5em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2em;
+        text-align: start;
+    }
+
+    #text{
+        padding: 0rem;
+        max-width: 18.5em;
+    }
+}
+
+
+
+
+
+

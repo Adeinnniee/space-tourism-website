@@ -1,0 +1,225 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+
+
+
+/* -------------------------- GLOBAL STYLES ------------------------------- */
+:root{
+    --barlow-font-family: 'Barlow Condensed', sans-serif;
+    --bellefair-font-family: 'Bellefair', serif;
+    --alt-nav-bg-color: hsl(0 0% 0% / 0.5);
+    --nav-bg-color: hsl(0 0% 100% / 0.05);
+    --text-color: #D0D6F9;
+    --website-color: #0B0D17;
+    --white-color: #FFFFFF;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/* ------------------------------ COMMON STYLES ----------------------------- */
+#nav-line, #menu{
+    display: none;
+}
+
+.numbers, .links{
+    color: var(--white-color);
+    letter-spacing: 0.2rem;
+}
+
+li:hover, li:focus{
+    transition: transform 700ms ease-out;
+}
+
+
+
+/* styling the header section */
+header{
+    padding-bottom: 4em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo{
+    padding: 1.7em;
+}
+
+#navigation{
+    display: flex;
+    list-style: none;
+    gap: 2em;
+    background: var(--alt-nav-bg-color);
+}
+
+@supports (backdrop-filter: blur(1.2rem)){
+    #navigation{
+        background: var(--nav-bg-color);
+        backdrop-filter: blur(1.2rem);
+    }
+}
+
+a{
+    text-decoration: none;
+    font-size: clamp(0.9rem, 5vw, 1rem);
+    font-family: var(--barlow-font-family);
+}
+
+.numbers{
+    font-weight: bolder;
+    margin-inline-end: 0.7rem;
+}
+
+
+
+
+
+
+/* -------------------------  MEDIA QUERIES  --------------------------------- */
+
+@media (max-width: 37.5em){
+
+    /* ------------------------------ COMMON STYLES ----------------------------- */
+    li:hover, li:focus{
+        transform: translateY(-30%);
+    }
+
+
+
+    /* styling the header section */
+    #navigation{
+        position: fixed;
+        flex-direction: column;
+        inset: 0 0 0 30%;
+        padding: min(30vh, 10rem) 2rem;
+        z-index: 0;
+        transform: translateX(100%);
+        transition: 350ms ease-out;
+    }
+
+    .mobile-toggle{
+        position: absolute;
+        background-color: transparent;
+        background-image: url(./assets/shared/icon-hamburger.svg);
+        background-repeat: no-repeat;
+        width: 10%;
+        height: 20%;
+        border: none;
+        top: 2.5rem;
+        right: 0.7rem;
+        z-index: 1;
+    }
+
+    .mobile-toggle[aria-expanded = "true"]{
+        background-image: url(./assets/shared/icon-close.svg);
+    }
+
+    #navigation[data-visible = "true"]{
+        transform: translateX(0%);
+    }
+}
+
+
+
+
+
+@media (min-width: 37.5em) and (max-width: 56.25em){
+
+    /* ------------------------------ COMMON STYLES ----------------------------- */
+    li:hover, li:focus{
+        transform: translateY(-25%);
+    }
+
+    a:hover, a:focus{
+        text-underline-offset: 3.75rem;
+    }
+
+
+
+    /* styling the container and header section */
+    .numbers{
+        display: none;
+    }
+
+    #navigation{
+        padding: 2em 3em;
+    }
+
+    #logo{
+        padding-top: 1.2rem;
+    }
+
+    li{
+        margin-bottom: 1.5rem;
+    }
+}
+
+
+
+
+
+@media (min-width: 56.25em){
+
+    /* ------------------------------ COMMON STYLES ----------------------------- */
+    li:hover, li:focus{
+        transform: translateY(-10%);
+        text-underline-offset: 2rem;
+    }
+
+
+
+    /* styling the header section */
+    header{
+        margin-top: 1rem;
+    }
+
+    #navigation{
+        padding: 1.8em 3em;
+    }
+
+    #nav-line{
+        display: block;
+        border: 0.05rem solid var(--nav-bg-color);
+        z-index: 1;
+        margin-left: 2rem;
+        flex: 1 0 20em;
+    }
+}
+
+
+
+
+
+@media (min-width: 37.5em){
+
+    /* ------------------------------ COMMON STYLES ----------------------------- */
+    a:hover, a:focus{
+        cursor: pointer;
+        text-decoration: underline solid 0.2rem;
+    }
+    
+    
+
+    /* styling the header section */
+    .mobile-toggle{
+        display: none;
+    }
+
+    a:hover{
+        text-decoration-color: var(--text-color);
+    }
+    
+    a:focus{
+        text-decoration-color: var(--white-color);
+    }
+}
+
+
+
+

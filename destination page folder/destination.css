@@ -1,0 +1,274 @@
+
+
+/* -------------------------- GLOBAL STYLE ------------------------------- */
+body{
+    background: url(../assets/destination/background-destination-mobile.jpg);
+}
+
+
+
+/* ------------------------------ COMMON STYLES ----------------------------- */
+h3, .links-btn:focus, .title, .subheading-1{
+    color: var(--white-color);
+}
+
+h3, .title, .subheading-1{
+    text-transform: uppercase;
+}
+
+.links-btn, .title{
+    letter-spacing: 0.2rem;
+}
+
+h3, .info, .subheading-2{
+    font-family: var(--barlow-font-family);
+}
+
+h3, .subheading-2, .subheading-1{
+    letter-spacing: 0.15rem;
+}
+
+.links-btn, .links-btn:hover, .info, .subheading-2{
+    color: var(--text-color);
+}
+
+.title, .subheading-1{
+    font-family: var(--bellefair-font-family);
+}
+
+.links-btn:hover, .links-btn:focus{
+    cursor: pointer;
+    text-decoration: underline solid 0.2rem;
+    text-underline-offset: 0.7rem;
+}
+
+#mars, #europa, #titan, #mars-image, #europa-image, #titan-image{
+    display: none;
+}
+
+
+
+/* styling the header section */
+header{
+    padding-bottom: 0rem;
+}
+
+
+
+/* styling the main section */
+main{
+    margin: 0 auto;
+    text-align: center;
+    padding: 0rem 1.5rem;
+}
+
+.changing-img{
+    max-width: 100%;
+}
+
+#num{
+    margin-inline-end: 1rem;
+    opacity: 30%;
+}
+
+.links-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+li{
+    list-style: none;
+}
+
+.title{
+    letter-spacing: 0.2rem;
+    font-size: 3.5rem;
+}
+
+.links-btn:hover{
+    text-decoration-color: var(--text-color);
+    transform: translateY(-5%);
+    transition: transform 700ms ease-out;
+}
+
+.links-btn:focus{
+    text-decoration-color: var(--white-color);
+}
+
+.info{
+    line-height: 1.5rem;
+    letter-spacing: 0.05rem;
+}
+
+.horizontal-line{
+    border: 0.05rem solid var(--nav-bg-color);
+    margin: 0.6rem 0rem;
+}
+
+.subheading-2{
+    font-size: 0.875rem;
+}
+
+.subheading-1{
+    font-size: 1.75rem;
+}
+
+.links-btn{
+    background: none;
+    border: none;
+    font-size: 0.8rem;
+}
+
+
+
+
+
+
+/* -------------------------------- MEDIA QUERIES -------------------------------- */
+
+@media (min-width: 23.5em) and (max-width: 48.125em){
+
+    /* -------------------------- GLOBAL STYLE ------------------------------- */
+    body{
+        background: url(../assets/destination/background-destination-tablet.jpg);  
+    }
+}
+
+
+
+
+
+@media (min-width: 48.125em){
+
+    /* -------------------------- GLOBAL STYLE ------------------------------- */
+    body{
+        background: url(../assets/destination/background-destination-desktop.jpg)  
+    }
+
+}
+
+
+
+
+
+@media (min-width: 37.5em){
+
+    /* styling the main section */
+    h3{
+        margin-top: 2rem;
+        text-align: start;
+    }
+
+    .below-line{
+        display: flex;
+        align-items: center;
+    }
+
+    .links-btn{
+        font-size: 1rem;
+    }
+    
+}
+
+
+
+
+
+@media (min-width: 37.5em) and (max-width: 56.25em){
+
+    /* styling the main section */
+    h3{
+        margin-inline-start: 1rem;
+    }
+
+    section{
+        padding: 0rem 3rem;
+    }
+
+    .info{
+        max-width: 80%;
+        margin-inline-start: 3.5rem;
+    }
+
+    .below-line{
+        justify-content: center;
+        gap: 4rem;
+    }
+
+    .changing-img{
+        display: inline-block;
+    }
+}
+
+
+
+
+
+@media (min-width: 56.25em){
+
+    /* ------------------------------ COMMON STYLES ----------------------------- */
+    article, .below-line, ul{
+        text-align: start;
+    }
+
+    
+
+    /* styling the main section */
+    h3{
+        margin-left: 7rem;
+    }
+
+    .planet{
+        display: flex;
+        justify-content: space-between;
+        padding: 0rem 6rem;
+        gap: 2rem;
+    }
+
+    .details{
+        margin-top: 3rem;
+    }
+
+    .title{
+        font-size: 6.25rem;
+    }
+
+    .info{
+        line-height: 1.7rem;
+        max-width: 25em;
+    }
+
+    .below-line{
+        justify-content: space-between;
+        width: 87%;
+    }
+
+    .changing-img{
+        margin-top: 3rem;
+        align-self: start;
+    }
+
+    .links-section{
+        justify-content: space-between;
+    }
+}
+
+
+
+
+
+@media(min-width: 125em){
+
+    /*styling the main section */
+    .below-line{
+        width: 92%;
+    }
+}
+
+
+
+
+
+

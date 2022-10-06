@@ -1,0 +1,271 @@
+
+
+/* -------------------------- GLOBAL STYLE ------------------------------- */
+body{
+    background: url(../assets/crew/background-crew-mobile.jpg);
+}
+
+
+
+/* ------------------------------ COMMON STYLES ----------------------------- */
+h2, h3, h4{
+    color: var(--white-color);
+}
+
+h3, p{
+    font-family: var(--barlow-font-family); 
+}
+
+.circle-links:hover, .circle-links:focus{
+    cursor: pointer;
+}
+
+h2, h4{
+    text-transform: uppercase;
+    font-family: var(--bellefair-font-family);
+    
+}
+
+#mark, #victor, #ansari, #mark-pic, #victor-pic, #ansari-pic{
+    display: none;
+}
+
+
+
+/* styling the header section */
+header{
+    padding-bottom: 0rem;
+}
+
+
+
+/* styling the main section */
+main{
+    margin: 0rem auto;
+    text-align: center;
+    padding: 0rem 0.5rem;
+}
+
+#num{
+    margin-inline-end: 1rem;
+    opacity: 30%;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    letter-spacing: 0.2rem;
+}
+
+.changing-pics{
+    max-width: 50%;
+    margin-top: 2.5rem;
+}
+
+#line{
+    border: 0.01rem solid var(--website-color);
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0.6rem 0rem;
+}
+
+.circle-links{
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    border: 0.2rem solid var(--website-color);
+    background-color: var(--website-color);
+    font-size: 0rem;
+}
+
+.circle-links:hover{
+    border-color: var(--text-color);
+    background-color: var(--text-color);
+    transform: translateY(-15%);
+    transition: transform 700ms ease-out;
+}
+
+.circle-links:focus{
+    border-color: var(--white-color);
+    background-color: var(--white-color);
+}
+
+h4{
+    opacity: 50%;
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+p{
+    padding: 0rem 0.6rem;
+    color: var(--text-color);
+    line-height: 1.5rem;
+    letter-spacing: 0.03rem;
+}
+
+
+
+
+
+
+/* -------------------------- MEDIA QUERIES ----------------------------------- */
+
+@media (min-width: 23.5em) and (max-width: 48.125em){
+
+    /* -------------------------- GLOBAL STYLE ------------------------------- */
+    body{
+        background: url(../assets/crew/background-crew-tablet.jpg);  
+    }
+}
+
+
+
+
+
+@media (min-width: 48.125em){
+
+    /* -------------------------- GLOBAL STYLE ------------------------------- */
+    body{
+        background: url(../assets/crew/background-crew-desktop.jpg)  
+    }
+
+}
+
+
+
+
+
+
+@media (min-width: 37.5em){
+
+    /* ------------------------------ COMMON STYLES ----------------------------- */
+    .positioning, .lg-screens-positoning{
+        display: flex;
+        align-content: center;
+    }
+
+
+
+    /* styling the main section */
+    h3{
+        text-align: start;
+        margin-top: 2rem;
+    }
+
+    #line{
+        display: none;
+    }
+
+    .lg-screens-positoning{
+        flex-direction: column;
+    }
+
+    section{
+        order: 1;
+    }
+
+    .buttons{
+        order: 2;
+    }
+
+    p{
+        display: inline-block;
+        line-height: 1.7rem;
+        letter-spacing: 0.05rem;
+    }
+}
+
+
+
+
+
+@media (min-width: 37.5em) and (max-width: 56.25em){
+
+    /* styling the main section */
+    h3{
+        margin-inline-start: 2rem;
+    }
+
+    .positioning{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .changing-pics{
+        order: 3;
+        margin-bottom: 3rem;
+        align-self: center;
+    }
+
+    p{
+        max-width: 30em;
+    }
+
+    .order{
+        order: 3;
+    }
+}
+
+
+
+
+
+@media (min-width: 56.25em){
+
+    /* styling the main section */
+    h3{
+        margin-inline-start: 8rem;
+    }
+
+    h2{
+        font-size: 2.5rem;
+    }
+
+    .positioning{
+        flex-direction: row;
+        justify-content: space-between;
+        margin-block-end: 4rem;
+        margin-inline-start: 3rem;
+        padding: 0rem 5rem;
+    }
+
+    .order{
+        order: 2;
+    }
+
+    .lg-screens-positoning{
+        margin-top: 6rem;
+        order: 1;
+        text-align: start;
+        flex-basis: 100%;
+    }
+
+    .buttons{
+        justify-content: flex-start;
+    }
+
+    .changing-pics{
+        order: 2;
+        max-width: 100%;
+        margin-block-end: 3rem;
+    }
+
+    p{
+        padding: 0;
+        max-width: 20em;
+    }
+
+    .circle-links{
+        border-color: var(--nav-bg-color);
+        background-color: var(--nav-bg-color);
+    }
+}
+
+

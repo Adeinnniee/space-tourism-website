@@ -1,0 +1,262 @@
+
+
+/* -------------------------- GLOBAL STYLE ------------------------------- */
+body{
+    background: url(../assets/technology/background-technology-mobile.jpg);
+}
+
+
+
+/* ------------------------------ COMMON STYLES ----------------------------- */
+h3, h4, p{
+    font-family: var(--barlow-font-family);
+}
+
+h2, h3, h4{
+    text-transform: uppercase;
+}
+
+h3, h2, .circle-btns{
+    color: var(--white-color);
+}
+
+h4, p{
+    color: var(--text-color);
+}
+
+#launch-vehicle-portrait-img, #spaceport-portrait-img, #space-capsule-portrait-img, #launch-vehicle-landscape-img,#spaceport-landscape-img, #space-capsule-landscape-img, #spaceport, #space-capsule{
+    display: none;
+}
+
+.circle-btns:hover, .circle-btns:focus{
+    cursor: pointer;
+}
+
+
+
+/* styling the header section */
+header{
+    padding-bottom: 0rem;
+}
+
+
+/* styling the main section */
+main{
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2{
+    font-size: 2rem;
+    font-family: var(--bellefair-font-family);
+    letter-spacing: 0.2rem;
+}
+
+h3{
+    letter-spacing: 0.2rem;
+    margin-inline-start: 0.8rem;
+}
+
+h4{
+    letter-spacing: 0.2rem;
+    font-size: 1rem;
+    margin-block-end: 0.5rem;
+}
+
+#num{
+    margin-inline-end: 1rem;
+    opacity: 30%;
+}
+
+p{
+    padding: 0rem 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.03rem;
+}
+
+.tech-portrait-imgs{
+    max-width: 100%;
+}
+
+.num-btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    margin: 2rem 0rem;
+}
+
+.circle-btns{
+    border: 0.0005rem solid var(--text-color);
+    background-color: var(--website-color);
+    padding: 0.35rem 0.7rem;
+    border-radius: 50%;
+}
+
+.circle-btns:hover{
+    border: 0.11rem solid var(--white-color);
+    transform: translateY(-8%);
+    transition: transform 700ms ease-out;
+}
+
+.circle-btns:focus{
+    border-color: var(--white-color);
+    background-color: var(--white-color);
+    color: var(--website-color);
+}
+
+section{
+    margin-block-end: 3rem;
+}
+
+
+
+
+
+
+/* -------------------------- MEDIA QUERIES ----------------------------------- */
+
+@media (min-width: 23.5em) and (max-width: 48.125em){
+
+    /* -------------------------- GLOBAL STYLE ------------------------------- */
+    body{
+        background: url(../assets/technology/background-technology-tablet.jpg);  
+    }
+}
+
+
+
+
+
+@media (min-width: 48.125em){
+
+    /* -------------------------- GLOBAL STYLE ------------------------------- */
+    body{
+        background: url(../assets/technology/background-technology-desktop.jpg)  
+    }
+}
+
+
+
+
+
+@media(max-width: 37.5em){
+
+    /* styling the main section */
+    #launch-vehicle-portrait-img{
+        display: block;
+    }
+}
+
+
+
+
+
+@media(min-width: 37.5em){
+
+    /* styling the main section */
+    h3{
+        margin-top: 2rem;
+        text-align: start;
+    }
+
+    p{
+        line-height: 1.7rem;
+        letter-spacing: 0.05rem;
+    }
+}
+
+
+
+
+
+@media (min-width: 37.5em) and (max-width: 56.25em){
+
+    /* styling the main section */
+    h3{
+        margin-inline-start: 2rem;
+    }
+
+    p{
+        max-width: 27em;
+        display: inline-block;
+    }
+
+    #launch-vehicle-portrait-img{
+        display: none;
+    }
+
+    #launch-vehicle-landscape-img{
+        display: block;
+    }
+}
+
+
+
+
+
+@media (min-width: 56.25em){
+
+    /* styling the main section */
+    h2{
+        font-size: 2.5rem;
+    }
+
+    h3{
+        margin-inline-start: 8.5rem;
+    }
+
+    #launch-vehicle-portrait-img{
+        display: block;
+    }
+
+    article{
+        text-align: start;
+    }
+
+    .lg-screens-parent-order{
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+        justify-content: space-between;
+        gap: 4rem;
+        margin-inline-start: 4.6rem;
+    }
+
+    .lg-screens-child-order{
+        order: 1;
+        flex-basis: 70%;
+        display: flex;
+        gap: 4rem;
+    }
+
+    .portrait-imgs{
+        order: 2;
+        margin-block-end: 4rem;
+    }
+
+    p{
+        padding: 0;
+        max-width: 28em;
+    }
+
+    .num-btns{
+        flex-direction: column;
+        height: 100%;
+        gap: 2rem;
+        margin: 0rem;
+        justify-content: space-between;
+    }
+
+    .circle-btns{
+        padding: 0.85rem 1.2rem;
+    }
+}
+
+
+
+
+
+
+
+
